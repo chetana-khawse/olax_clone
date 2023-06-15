@@ -1,8 +1,8 @@
 
 
 
+![Screenshot (49)](https://github.com/chetana-khawse/olax_clone/assets/134994861/cf3266fd-f2cb-4bee-a522-b23856ec13c1)
 
-[Screenshot (48)](https://github.com/chetana-khawse/olax_clone/assets/134994861/86a082d8-4a25-48c4-acfb-9dcf6672bf88)
 
 #  Getting Started with Create React App!
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
