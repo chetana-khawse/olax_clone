@@ -7,7 +7,7 @@ import Three from "./components/Three";
 
 function App() {
   return (
-    <div style={{backgroundColor:"black",padding:"10px 50px 0px 50px"}}>
+    <div style={{backgroundColor:"white",padding:"10px 50px 0px 50px"}}>
       <Header/>
       <Home/>
       <Map/>

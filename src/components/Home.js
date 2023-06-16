@@ -2,19 +2,19 @@ import React from 'react'
 
 function Home() {
   return (
-    <div style={{backgroundColor:"white"}}>
+    <div style={{backgroundColor:"#F46F52  ",color:"black" }}>
         
         <div style={{textAlign:"center"}}>
-            <input type="text"   style={{
+            <input type="text" placeholder='Pickup at'  style={{
                      fontSize:"20px",
-                     fontFamily:"sans-serif",
+                     fontFamily:"sans-serif", backgroundColor: "rgba(0, 0, 0, 0)",
                      border:"none",
-                     borderBottom:"2px solid grey",margin:"20px",minWidth:"70vh"}} placeholder='Pickup at'/><br/>
+                     borderBottom:"2px solid black",minWidth:"70vh",color:"black"}} /><br/>
             <input type="text" style={{
                      fontSize:"20px",
                      border:"none",
-                     fontFamily:"sans-serif",
-                     borderBottom:"2px solid grey",margin:"20px",minWidth:"70vh"}} placeholder='Drop'/>
+                     fontFamily:"sans-serif", backgroundColor: "rgba(0, 0, 0, 0)",
+                     borderBottom:"2px solid black",margin:"20px",minWidth:"70vh",coloe:"black"}} placeholder='Drop'/>
         </div>
        
 

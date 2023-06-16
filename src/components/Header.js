@@ -8,8 +8,8 @@ function Header() {
                  padding:"10px  80px ",
                  alignItems:"center",
                  justifyContent:"center",
-                 backgroundColor:"white",borderRadius:"30px 30px 0 0"}}>
-            <h1 style={{fontSize:"70px"}}>Olax Cab <img src={"icons8-car-64.png"} alt="car logo"/></h1>
+                 backgroundColor:"#F46F52   ",borderRadius:"30px 30px 0 0"}}>
+            <h1 style={{fontSize:"70px", fontFamily:"fantasy",color:"black"}}> <img src={"car (1).png"} alt="car logo"/>Olax Cab...</h1>
 
 
          </div>

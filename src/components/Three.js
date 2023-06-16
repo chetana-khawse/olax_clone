@@ -5,35 +5,37 @@ function Three() {
     <div style={{
         color:"black", 
     display:"grid",
-    gap: "30px",
-    gridTemplateColumns: "auto auto auto",
-    padding: "5px 5px"}}>
+    gridTemplateColumns: "auto auto auto"}}>
         
         
-        <div style={{
-        border: "2px solid grey",
-        padding: "20px",backgroundColor:"white",
+        <div style={{ textDecoration:"underline",
+        borderRight: "2px solid #AD3117 ",
+        padding: "0 10px",backgroundColor:"#F46F52  ",
         fontSize: "30px",
-        textAlign: "center",minHeight:"20vh",fontFamily:"sans-serif",borderRadius:"15px"
+        textAlign: "center",minHeight:"20vh",fontFamily:"Fantasy"
       }}>Micro<br/>
-      <img src={"icons8-car.gif"} alt=" logo" /></div>
+      $ 10<br/>
+      <img src={"icons8-car-50.png"} alt=" logo" /></div>
       
       
       <div style={{
+        textDecoration:"underline",
     
-      border: "2px solid grey",
-      padding: "20px",
+      borderRight: "2px solid #AD3117 ",
+      padding: "0 10px",
       fontSize: "30px",
-      backgroundColor:"white",
-      textAlign: "center",minHeight:"20vh",fontFamily:"sans-serif",borderRadius:"15px"}}>Min<br/>
+      backgroundColor:"#F46F52  ",
+      textAlign: "center",minHeight:"20vh",fontFamily:"Fantasy"}}>Mini<br/>
+      $ 20<br/>
      < img src={"icons8-car-48 (1).png"} alt=" logo" /></div>
 
       <div style={{
-      border: "2px solid grey",
-      backgroundColor:"white",
-      padding: "20px",
+      textDecoration:"underline",
+      backgroundColor:"#F46F52  ",
+      padding: "0 10px ",
       fontSize: "30px",
-      textAlign: "center",minHeight:"20vh",fontFamily:"sans-serif",borderRadius:"15px"}}>Prime <br/>
+      textAlign: "center",minHeight:"20vh",fontFamily:"Fantasy"}}>Prime <br/>
+      $ 40<br/>
       <img src={"icons8-car-94.png"} alt=" logo" /></div>
       </div>
   )
