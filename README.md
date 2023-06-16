@@ -1,5 +1,10 @@
-# Getting Started with Create React App
 
+
+
+![Screenshot (49)](https://github.com/chetana-khawse/olax_clone/assets/134994861/cf3266fd-f2cb-4bee-a522-b23856ec13c1)
+
+
+#  Getting Started with Create React App!
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
