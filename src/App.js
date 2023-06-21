@@ -1,18 +1,21 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Map from "./components/Map";
+
 import Three from "./components/Three";
+import End from "./components/End";
+import Map1 from "./components/Map1";
 
 
 function App() {
   return (
-    <div style={{backgroundColor:"white",padding:"10px 50px 0px 50px"}}>
+    <div style={{backgroundColor:"white",padding:"10px 490px 0px 490px",minWidth:"576px",boxShadow:"10px grey"}}>
       <Header/>
       <Home/>
-      <Map/>
+      <Map1/>
       <Three/>
-    </div>
+        <End/>
+        </div>
   );
 }
 

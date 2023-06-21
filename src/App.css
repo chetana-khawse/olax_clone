@@ -40,3 +40,11 @@
   color: black;
   opacity: 0.9; /* Firefox */
 }
+.react-mapbox-ac-input {
+  border: none transparent;
+  outline: none;
+  background: rgba(245, 245, 245, 0.5);
+  margin: 20px 5px 5px 5px;
+  padding: 7px;
+  border-radius: 7px;
+}
