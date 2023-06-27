@@ -1,7 +1,7 @@
 // import Header from "./components/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Three from "./components/Three";
+// import Three from "./components/Three";
 import End from "./components/End";
 import Map1 from "./components/Map1";
 import './index.css';
@@ -16,7 +16,7 @@ function App() {
       {/* <Header/> */}
      {/* <View/>  */}
       <Map1/> 
-      <Three/>
+      {/* <Three/> */}
         <End/></div>
         </>
   );
