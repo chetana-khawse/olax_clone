@@ -71,7 +71,7 @@ useEffect(() => {
   'line-cap': 'round'
   },
   'paint': {
-  'line-color': 'black',
+  'line-color': 'grey',
   'line-width': 7
   
   }
