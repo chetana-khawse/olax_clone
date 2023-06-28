@@ -16,12 +16,12 @@ mapboxApiAccessToken:
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2hldGFuYS1raGF3c2UiLCJhIjoiY2xqM3NkaGxkMG92MzNwbzB6cTZranZ5diJ9.HmEUfEtrfUhGUPw6d0p4jQ';
  
 function Map1() {
-const mapContainer = useRef(null);
-const map = useRef(null);
- let base_fare = 60;
- const [startPoint, setStartPoint] = useState();
+   const mapContainer = useRef(null);
+   const map = useRef(null);
+   let base_fare = 60;
+   const [startPoint, setStartPoint] = useState();
   const [endPoint, setEndPoint] = useState();
-   const [basePrice, setBasePrice] = useState();
+  const [basePrice, setBasePrice] = useState();
   const [standardPrice, setStandardPrice] = useState();
   const [premiumPrice, setPremiumPrice] = useState();
 
@@ -56,12 +56,8 @@ useEffect(() => {
   'properties': {},
   'geometry': {
   'type': 'LineString',
-  'coordinates': [ 
-
-  ]
-  }
-  }
-  });
+  'coordinates': [  ] 
+  }} });
   map.current.addLayer({
   'id': 'route',
   'type': 'line',
@@ -73,37 +69,28 @@ useEffect(() => {
   'paint': {
   'line-color': 'grey',
   'line-width': 7
-  
   }
   });
   });
+ 
   
-    
-
-
-
-    
   },[]);
   
   
 
 function findRoute(){
                      console.log("Find route", startPoint, endPoint)
-
-                 let url = `https://api.mapbox.com/directions/v5/mapbox/cycling/${startPoint[0]},${startPoint[1]};${endPoint[0]},${endPoint[1]}?geometries=geojson&access_token=pk.eyJ1Ijoic3VtaXRwYXRpbCIsImEiOiJjazU0eXFweXowYWwyM2VrYjNjc3BhOG5nIn0.8jHA62nA33gUGnnZnwdmVQ`
-                 axios.get(url).then((res)=>{
-                                                  console.log("res", res.data.routes[0]["geometry"])
-
-
-
-                                                  
-                                                  map.current.flyTo({
-                                                                  center: startPoint,
-                                                                  essential: true ,// this animation is considered essential with respect to prefers-reduced-motion
-                                                                   duration:10000,
-                                                                   zoom:11
-                                                                });
+    let url = `https://api.mapbox.com/directions/v5/mapbox/cycling/${startPoint[0]},${startPoint[1]};${endPoint[0]},${endPoint[1]}?geometries=geojson&access_token=pk.eyJ1Ijoic3VtaXRwYXRpbCIsImEiOiJjazU0eXFweXowYWwyM2VrYjNjc3BhOG5nIn0.8jHA62nA33gUGnnZnwdmVQ`
+     axios.get(url).then((res)=>{
+             console.log("res", res.data.routes[0]["geometry"])
+             map.current.flyTo({
+                                center: startPoint,
+                                essential: true , 
+                                duration:10000,
+                                zoom:11
+                                             });
     let routeData = map.current.getSource("routeData").setData(res.data.routes[0]["geometry"])
+    
 
     setBasePrice(base_fare +Math.round(parseInt(res.data.routes[0]["distance"])*0.001*5))
     setStandardPrice(base_fare + 20+ Math.round((res.data.routes[0]["distance"])*0.001*5))
@@ -113,50 +100,55 @@ function findRoute(){
 
 
    return (
-    <><div style={{minWidth:"100vh"}}>
-    <div style={{ border:"1px  groove grey",minHeight:"10vh",
-                padding:"4px",borderRadius:"3px 3px"
-                 }}> 
+    <><div style={{minWidth:"100vh",borderRadius:"18px 18px 18px 18px"}}>
+      
+
                 
-                 
-                   <MapboxAutocomplete
+<div ref={mapContainer} className="map-container" style={{width:"100vh" ,borderRadius:"8px 8px 8px 8px",boxshadow:"8px grey",position:"relative", minHeight:"100vh",border:"1px groove grey"}} >
+<div className='sidebar'><div className='sidebar1'>                   
+      <MapboxAutocomplete
           publicKey={mapAccess.mapboxApiAccessToken}
           inputClass="form-control search"
           onSuggestionSelect={_suggestionStartSelect} 
-          country="in" 
+          country="in" className='sidebar1'
           resetSearch={false}
-          placeholder="&#x26B2;   Start location" />
+          placeholder="&#x25FC;   Start location" />
          
          <MapboxAutocomplete
           publicKey={mapAccess.mapboxApiAccessToken}
-          inputClass="form-control search"
+          inputClass="form-control search" className='sidebar1'
           onSuggestionSelect={_suggestionEndSelect}
           country="in" 
           resetSearch={false}
-          placeholder=" &#x2192;   End location" /> 
+          placeholder=" &#x25FC;   End location" /> 
             
-          <button onClick={()=>{findRoute();}} 
-                  style={{marginLeft:"300px",backgroundColor:"black",
-                          color:"white", border:" 1px groove",padding:"8px",width:"190px",borderRadius:"17px"}}
-                        >Confirm Route</button>
-          </div>
+<button onClick={()=>{
+                       findRoute();}} 
+                        style={{ marginLeft:"260px",backgroundColor:"black",fontSize:"20px",
+                           color:"white", border:" 2px groove grey",padding:"8px",width:"200px",borderRadius:"17px"}}
+                        > Confirm Route</button>
+</div></div>
 
-                
-     <div ref={mapContainer} className="map-container" style={{width:"100vh" , minHeight:"50vh",border:"1px groove grey"}} />
-    <div style={{color:"black", 
-                display:"grid",
-                gridTemplateColumns: "auto auto auto",gap:"1.5px"}}>
-  <div style={{ 
-        border: "2px solid grey", fontSize: "30px",
-        textAlign: "center",minHeight:"20vh",fontFamily:"verdana bold"}}>Micro<br/>₹{basePrice}</div>
-  <div style={{ 
-        border: "2px solid grey",fontSize: "30px",
-        textAlign: "center",minHeight:"20vh",fontFamily:"verdana bold"}}>Mini<br/>₹{standardPrice}</div>
-   <div style={{ 
-        border: "2px solid grey",
-        fontSize: "30px",
-        textAlign: "center",minHeight:"20vh",fontFamily:"verdana bold"}}>Premium <br/>₹ {premiumPrice}</div>     </div>   
-             </div>   </>
+
+<div className='a' style={{display:"grid",gridTemplateColumns:"auto auto auto"}}>
+<div className='a1'
+style={{ 
+        fontSize: "30px",width:"260px",margin: "2px",boxShadow: "5px 5px 5px 5px grey",
+        textAlign: "center",minHeight:"20vh",fontFamily:"verdana bold",textDecoration:"underline"}}
+        >Micro<br/>
+        <br/>₹{basePrice}</div>
+  <div  className='a1'
+  style={{ 
+        fontSize: "30px",width:"260px",margin: "2px",boxShadow: "5px 5px 5px 5px grey",textDecoration:"underline",
+        textAlign: "center",minHeight:"20vh",fontFamily:"verdana bold"}}
+        >Mini<br/><br/>₹{standardPrice}</div>
+   <div className='a1'
+   style={{ 
+        
+        fontSize: "30px",width:"260px",margin: "2px",boxShadow: "5px 5px 5px 5px grey",textDecoration:"underline",
+        textAlign: "center",minHeight:"20vh",fontFamily:"verdana bold"}}
+        >Premium  <br/> <br/> ₹ {premiumPrice}</div>     </div>   
+             </div>  </div> </>
   )
 }
 
