@@ -48,3 +48,8 @@
   padding: 7px;
   border-radius: 7px;
 }
+input[type=text] {
+  width: 100%;
+  border: none;background-color: white;
+  border-bottom: 1px solid black;
+}
