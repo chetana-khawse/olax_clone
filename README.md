@@ -1,6 +1,7 @@
+![Screenshot (59)](https://github.com/chetana-khawse/olax_clone/assets/134994861/29c4fa95-2328-4bcd-9a36-9e489f97edd6)
 
 
-
+![Screenshot (58)](https://github.com/chetana-khawse/olax_clone/assets/134994861/4c4d1c09-1d0e-4d4f-badd-364099ba29a7)
 
 #  Getting Started with Create React App!
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -8,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
 
 ### `npm start`
 
