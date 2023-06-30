@@ -1,8 +1,17 @@
-![Screenshot (59)](https://github.com/chetana-khawse/olax_clone/assets/134994861/29c4fa95-2328-4bcd-9a36-9e489f97edd6)
 
 
-![Screenshot (58)](https://github.com/chetana-khawse/olax_clone/assets/134994861/4c4d1c09-1d0e-4d4f-badd-364099ba29a7)
 
+
+
+![Screenshot (61)](https://github.com/chetana-khawse/olax_clone/assets/134994861/8227e29b-7a5d-4bb4-ab11-d0f6f2e829bd)
+
+
+
+
+
+![Screenshot (60)](https://github.com/chetana-khawse/olax_clone/assets/134994861/45a44e3c-d534-456f-a0d4-6bc1605212dd)
+
+   
 #  Getting Started with Create React App!
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
